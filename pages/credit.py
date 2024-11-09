@@ -162,7 +162,7 @@ with st.expander("2. Make a Transaction", expanded=True):
         st.write(f"**New Credit Score:** {st.session_state.credit_score}")
 
 # --- Step 3: Summary ---
-with st.expander("3. Summary", expanded=True):
+with st.expander("3. Summary :", expanded=True):
     st.write("Track your credit card balance, credit score, and see the effects of your decisions.")
     st.write(f"**Current Balance:** ${st.session_state.balance}")
     st.write(f"**Current Credit Score:** {st.session_state.credit_score}")
