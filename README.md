@@ -1,6 +1,6 @@
 # 💵 Welcome to Cash Course!
 
-A Streamlit app template for you to modify!
+This project was completed for WHACK 2024. Team: Natasha, Ashi, Nayeli, Noelle
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
 ## Inspiration
