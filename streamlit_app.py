@@ -3,10 +3,6 @@ import google.generativeai as genai
 
 st.set_page_config(layout="wide")
 
-genai.configure(api_key="AIzaSyAB7IqPaUC3lNWFL5YfKpb2zlAVizz06ag")
-model = genai.GenerativeModel("gemini-1.5-flash")
-
-
 # Method 1: Inject CSS directly with markdown
 st.markdown("""
 <style>
@@ -87,4 +83,3 @@ with c3:
     st.image("img/peep-30.png", width=325)
     
 
-# response = model.generate_content("How many planets are in our solar system?")
