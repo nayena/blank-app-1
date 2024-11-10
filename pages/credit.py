@@ -55,6 +55,12 @@ with tabs[0]:
         st.markdown("### What is it?")
         st.write("Everyone using credit is assigned a credit score: a type of financial report card. It tells lenders how trustworthy (also called creditworthiness) you are when it comes to paying back the money you owe (your debt). A FICO score, from the Fair Isaac Corporation, is the most commonly used credit model. Your score is ranked from 300-800. The higher your score, the better your credit is, and the more likely you are to be approved for loans or credit cards with lower interest rates.")
     with col2:
+        st.write(" ")
+        st.write(" ")
+        st.write(" ")
+        st.write(" ")
+        st.write(" ")
+        st.write(" ")           
         st.image("Graphics/money.png")
     st.markdown("### What goes into a credit score?")
     st.write("Your credit score is affected by many factors:")
@@ -92,28 +98,27 @@ with tabs[1]:
     """)
 
 with tabs[2]:
- col1, col2 = st.columns(2)
-with col1:
-        st.markdown("### What is it?")
-        st.write("If you don’t manage your credit properly, it can lead to serious financial consequences, including accumulating high levels of debt. When you carry a balance on your credit card from month to month (meaning you don’t pay off the full amount), the credit card company charges interest on what you owe. This interest is often very high—sometimes 20% or more—making it easy to fall deeper into debt.")
-with col2:
-        st.write(" ")
-        st.write(" ")
-        st.image("Graphics/debt.png")
-        st.write(" ")
-        st.write(" ")
-        st.write(" ")
-        st.write("On top of interest, there may be fees like late payment fees, over-the-limit fees, or annual fees that can add up quickly. If you don’t make at least the minimum payment on time, your credit score will drop, and it will be harder to get approved for loans or other credit in the future.")
+    col1, col2 = st.columns(2)
+    with col1:
+          st.markdown("### What is it?")
+          st.write("If you don’t manage your credit properly, it can lead to serious financial consequences, including accumulating high levels of debt. When you carry a balance on your credit card from month to month (meaning you don’t pay off the full amount), the credit card company charges interest on what you owe. This interest is often very high—sometimes 20% or more—making it easy to fall deeper into debt.")
+    with col2:
+          st.write(" ")
+          st.write(" ")
+          st.image("Graphics/debt.png")
+          st.write(" ")
+          st.write(" ")
+          st.write(" ")
+          st.write(" ")
+          st.write(" ")
+          st.write("On top of interest, there may be fees like late payment fees, over-the-limit fees, or annual fees that can add up quickly. If you don’t make at least the minimum payment on time, your credit score will drop, and it will be harder to get approved for loans or other credit in the future.")
 
-with col1:
-    st.image("Graphics/debt2.png")
+    with col1:
+          st.image("Graphics/debt2.png")
 
-with col2:
+    
     st.write("If your credit card debt continues to grow and you still can’t make the payments, the credit card company may send your account to collections. This means they will hire a collection agency to try to get you to pay what you owe. Collection agencies can be persistent, calling you repeatedly and even reporting your unpaid debt to the credit bureaus, which can damage your credit for years. Poor credit can make it harder to rent an apartment, buy a car, or even get a job.")
-
-    col3 = st.columns(1)
-    with col3:
-     st.write("To avoid all of this, it’s important to understand how credit cards work, use them responsibly, and always make at least the minimum payment to avoid falling into debt. If you do find yourself struggling, it’s better to reach out for help early—there are programs and professionals who can assist in managing or reducing debt!")
+    st.write("To avoid all of this, it’s important to understand how credit cards work, use them responsibly, and always make at least the minimum payment to avoid falling into debt. If you do find yourself struggling, it’s better to reach out for help early—there are programs and professionals who can assist in managing or reducing debt!")
 
 st.markdown(
     "<h2 style='text-align: center;'>Credit Card Decision Simulator 🎮💸 </h2>",
