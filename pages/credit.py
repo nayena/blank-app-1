@@ -1,88 +1,94 @@
 import streamlit as st
-import pandas as pd
-import google.generativeai as genai
 
-st.title (" 💳 Credit")
+st.markdown("""
+<style>       
+        
+.stMarkdown p {
+    font-size: 20px;
+}    
 
-st.header  ("What is it? ")
-st.write  ("A numerical rating that indicates your creditworthiness, impacting your ability to get loans and favorable rates. Tips: Regularly check your credit report, and try to keep a good payment history and low credit utilization.")
+</style>
+""", unsafe_allow_html=True)
 
-image_url = "https://naran128386/Downloads/to/your/image.jpeg"
-with st.expander ("Opening Credit Cards"):
-    st.write ('''
-              What is it? A numerical rating that indicates your creditworthiness, impacting your ability to get loans and favorable rates. Tips: Regularly check your credit report, and try to keep a good payment history and low credit utilization.
-              ''')
+st.title (" 💳 Navigating Credit")
+st.subheader("What is it?")
+st.write  ("The idea of credit may be daunting at first, but it is essentially a tool— one that can give you access to more financial opportunities, but only if you manage it responsibly.")
 
-with st.expander ("Fees and Interest"):
-    st.write ('''
-              What are they? Costs associated with borrowing, including annual fees and interest rates. Tips: Understand the terms before you sign up. Look for cards with low or no annual fees and pay on time to avoid interest.
-              ''')
+st.subheader("Key Terms and Vocabulary")
+with st.expander("Click Here To See!"):
+    col1, col2 = st.columns(2)
 
-with st.expander ("Credit Bureaus"):
-    st.write ('''
-              What are they? Agencies (Equifax, Experian, and TransUnion) that compile your credit history. Tips: Review your credit report annually for errors, which you can do for free at AnnualCreditReport.com.
-              ''')
+    with col1:
+        st.write("**Credit**")
+        st.write("An agreement where a debtor receives a sum of money or something else of value and agrees to repay the creditor of that money later, sometimes with interest.")
 
-with st.expander ("Collections"):
-    st.write (''' 
-What is it? When debts go unpaid, they may be sent to a collection agency, impacting your credit score. Tips: If facing debt, communicate with creditors early to explore options before it reaches collections.
-              ''')
+        st.write("**Creditor**")
+        st.write("The lendor of the money.")
+        
+        st.write("**Debtor**")
+        st.write("The borrower of the money.")
+
+
+    with col2:
+        st.write("**Interest**")
+        st.write("An additional amount of money you pay or receive on top of the original sum. It's often expressed as percentages of the original sum.")
+    
+        st.write("**Credit Score**")
+        st.write("A number from 300 to 800 that lenders use to determine if you are a reliable borrower.")
+
+        st.write("**Repayments**")
+        st.write("The payments you make to pay back money you've borrowed, including interest incurred.")
+
+    
+st.write("Credit, at its core, is the act of borrowing money from lenders (like a bank) to make purchases, with the promise that you will pay the lender back later. For example: If you buy a laptop for 1,000USD on a credit card, you're borrowing that 1,000USD from the credit card company. You'll pay it back in the future—either all at once or in smaller payments.")
+    
 
 # Create tabs for different investment types
-tabs = st.tabs(["Opening Credits", "Fees and Interest", "Credit Bureaus", "Collections"])
+tabs = st.tabs(["Credit Score", "Credit Cards", "Collection, Fees, and Debt"])
  
 with tabs[0]:
-        col1, col2 = st.columns(2)
-        with col1:
-            st.markdown("### What is it?")
-            st.write("A retirement account that offers tax-free growth and tax-free withdrawals in retirement.")
-        with col2:
-            st.markdown("### Tips")
-            st.write("- Start as early as possible to maximize compound interest")
-            st.write("- You can contribute up to the annual limit if you have earned income")
+    st.markdown("### What is it?")
+    st.write("Everyone using credit is assigned a credit score: a type of financial report card. It tells lenders how trustworthy (also called creditworthiness) you are when it comes to paying back the money you owe (your debt). A FICO score, from the Fair Isaac Corporation, is the most commonly used credit model. Your score is ranked from 300-800. The higher your score, the better your credit is, and the more likely you are to be approved for loans or credit cards with lower interest rates.")
+
+    st.markdown("### What goes into a credit score?")
+    st.write("Your credit score is affected by many factors:")
+    st.markdown("""
+        1. **Payment History**: This is the most important factor. It shows whether you pay your bills on time.
+        2. **Amounts Owed**: This looks at how much debt you have compared to your total available credit. It's not just about how much debt you have, but also how much of your available credit you're using. If you're using a lot of your available credit (like maxing out a credit card), it can lower your score.
+        3. **Length of Credit History**: The longer your history of using credit responsibly, the better, the more reliable you seem to lenders.
+        4. **New Credit**: Opening several new credit accounts in a short period of time can lower your score. Each time you apply for credit, a "hard inquiry" is made, and too many inquiries can indicate to lenders that you're trying to borrow more than you can handle.
+        5. **Types of Credit Used**: Having a mix of different types of credit can benefit your score, as it shows you can manage different types of debt responsibly.
+        """)
     
 
 with tabs[1]:
-       
-        col1, col2 = st.columns(2)
-        with col1:
-            st.markdown("### What is it?")
-            st.write("A retirement account that offers tax-free growth and tax-free withdrawals in retirement.")
-        with col2:
-            st.markdown("### Tips")
-            st.write("- Start as early as possible to maximize compound interest")
-            st.write("- You can contribute up to the annual limit if you have earned income")
+    st.markdown("### What is it?")
+    st.write("Most commonly, people utilize credit by opening a credit card. A credit card is like a loan that you can keep using up to a certain limit, as long as you make regular payments to pay it down. Imagine it like a revolving door—each time you pay back what you owe, your limit to how much you borrow goes back up. The more consistent you are with ")
+    st.write("Credit cards let you make purchases now and then pay later. However, if you don’t pay the full amount by the due date, you’ll have to pay interest, which can add up quickly. They are very convenient, but because of this, there is a large risk of falling into credit card debt, which can significantly lower your credit score as mentioned above.")
+    st.write("To open a credit card, you must apply through a bank of your choice. Be selective when applying as each application may lower your credit score if you get denied!")
+    
+    st.markdown("### What kinds are there?")
+    st.write("There are many different **types of credit cards** availables-- all with different benefits. These below are helpful starting points.")
+
+    st.markdown("""
+    1. **Student Credit Cards**
+        - Specifically designed for people with little or no credit history, like college stdents. They often have lower credit limits and easier approval processes. These cards may offer rewards like cash back or points for purchases, such as dining or shopping. Using one responsibly (by paying on time) helps build your credit score and get you used to it. For example: The Discover it® Student Cash Back card offers 5% cashback on rotating categories and 1% on other purchases, plus cashback matching in your first year.
+    2. **Secured Credit Cards**
+        - Requires you to put down a deposit, which serves as your credit limit. It’s a good option if you’re new to credit or need to rebuild your score. The card functions like a regular credit card, and using it responsibly helps build your credit history. Many secured cards let you upgrade to an unsecured card over time. For example: The Capital One Secured Mastercard® lets you start with a deposit as low as $49 and offers a path to upgrade after responsible use
+    3. **Travel Credit Cards**
+        - For individuals who travel frequently for school, or work, they let you earn points or miles for purchases, which can be used to buy flights, hotel rooms, and other travel expenses. They typically require a bit more credit history, some entry-level travel cards have no annual fee and offer rewards on travel-related spending. For example: The Chase Sapphire Preferred® Card offers 2x points on travel and dining, while a more basic card like the Capital One QuicksilverOne offers 1.5% cashback on all purchases, which can be used for travel expenses   
+    """)
 
 with tabs[2]:
-       
-        col1, col2 = st.columns(2)
-        with col1:
-            st.markdown("### What is it?")
-            st.write("A retirement account that offers tax-free growth and tax-free withdrawals in retirement.")
-        with col2:
-            st.markdown("### Tips")
-            st.write("- Start as early as possible to maximize compound interest")
-            st.write("- You can contribute up to the annual limit if you have earned income")
+    st.markdown("### What is it?")
+    st.write("If you don’t manage your credit properly, it can lead to serious financial consequences, including accumulating high levels of debt. When you carry a balance on your credit card from month to month (meaning you don’t pay off the full amount), the credit card company charges interest on what you owe. This interest is often very high—sometimes 20% or more—making it easy to fall deeper into debt.")
+    st.write("On top of interest, there may be fees like late payment fees, over-the-limit fees, or annual fees that can add up quickly. If you don’t make at least the minimum payment on time, your credit score will drop, and it will be harder to get approved for loans or other credit in the future.")
+    st.write("If your credit card debt continues to grow and you still can’t make the payments, the credit card company may send your account to collections. This means they will hire a collection agency to try to get you to pay what you owe. Collection agencies can be persistent, calling you repeatedly and even reporting your unpaid debt to the credit bureaus, which can damage your credit for years. Poor credit can make it harder to rent an apartment, buy a car, or even get a job.")
+    st.write("To avoid all of this, it’s important to understand how credit cards work, use them responsibly, and always make at least the minimum payment to avoid falling into debt. If you do find yourself struggling, it’s better to reach out for help early—there are programs and professionals who can assist in managing or reducing debt!")
 
-
-
-with tabs[3]:
-
-        col1, col2 = st.columns(2)
-        with col1:
-            st.markdown("### What is it?")
-            st.write("A retirement account that offers tax-free growth and tax-free withdrawals in retirement.")
-        with col2:
-            st.markdown("### Tips")
-            st.write("- Start as early as possible to maximize compound interest")
-            st.write("- You can contribute up to the annual limit if you have earned income")
-
-
-
-#st.header ("Credit Game")
 
 st.markdown(
-    "<h2 style='text-align: center;'>Credit Card Desition Game </h2>",
+    "<h2 style='text-align: center;'>Credit Card Decision Game </h2>",
     unsafe_allow_html=True
 )
 
