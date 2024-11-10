@@ -86,6 +86,7 @@ with tabs[2]:
     st.write("If your credit card debt continues to grow and you still can’t make the payments, the credit card company may send your account to collections. This means they will hire a collection agency to try to get you to pay what you owe. Collection agencies can be persistent, calling you repeatedly and even reporting your unpaid debt to the credit bureaus, which can damage your credit for years. Poor credit can make it harder to rent an apartment, buy a car, or even get a job.")
     st.write("To avoid all of this, it’s important to understand how credit cards work, use them responsibly, and always make at least the minimum payment to avoid falling into debt. If you do find yourself struggling, it’s better to reach out for help early—there are programs and professionals who can assist in managing or reducing debt!")
 
+st.divider()
 
 st.markdown(
     "<h2 style='text-align: center;'>Credit Card Decision Game </h2>",
