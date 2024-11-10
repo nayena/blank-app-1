@@ -130,10 +130,11 @@ def main():
         with col1:
             st.markdown("### What is it?")
             st.write("A Roth IRA is a special type of retirement account. It’s like a savings account for your future, but with extra benefits. The money you put in grows tax-free, and when you take it out later in life (after age 59½), you don’t pay taxes on it. The best part is that you can take out the money you put in at any time without penalty. It’s a great way to save for the long term and keep more of your earnings.")
-        with col2:
             st.markdown("### Tips")
             st.write("- Start as early as possible to maximize compound interest")
             st.write("- You can contribute up to the annual limit if you have earned income")
+        with col2:
+            st.image("Graphics/rothiras.png")
             
         # Add an example compound interest calculator
         st.markdown("### 📊 Compound Interest Calculator")
@@ -159,10 +160,12 @@ def main():
         with col1:
             st.markdown("### What are they?")
             st.write("A brokerage account is an account that lets you buy and sell stocks, bonds, and other investments. Think of it like a wallet for your investments. To buy and sell stocks, you need to open a brokerage account with a company that helps you make those transactions, like a bank or an online platform. Some accounts charge fees, while others may not, but the goal is to provide you a place to manage your investments.")
-        with col2:
             st.markdown("### Tips")
             st.write("- Choose low-fee brokers")
             st.write("- Diversify your investments to manage risk")
+        with col2:
+            
+            st.image("Graphics/brokerage.png")
             
         # Add comparison table of popular brokers
         st.markdown("### Popular Online Brokers Comparison")
@@ -181,10 +184,12 @@ def main():
         with col1:
             st.markdown("### What are they?")
             st.write("**Index funds** are a type of investment that follow a market index, which is basically a list of top-performing companies. They're a simple and affordable way to invest your money. Instead of putting your money into just one company, index funds let you invest in a bunch of different companies all at once. This helps reduce risk and gives you more variety in your investments. It's like the saying, 'Don’t put all your eggs in one basket!'—if one company doesn't do well, you're still protected because you're invested in many others.")
-        with col2:
             st.markdown("### Tips")
             st.write("- Great for beginners")
             st.write("- Provide broad market exposure with lower fees than many managed funds")
+        with col2:
+            st.image("Graphics/index.png")
+            
             
         # Add popular index funds comparison
         st.markdown("### Popular Index Funds")
@@ -201,10 +206,12 @@ def main():
         with col1:
             st.markdown("### What are they?")
             st.write("Stocks are like tiny pieces of ownership in a company. When you buy a stock, you own a small part of that company. If the company does well and makes money, the value of your stock can go up, which means you can sell it for a profit. But if the company struggles, the value can go down, and you could lose money. Buying stocks is one way to invest in a company and potentially make money over time.")
-        with col2:
             st.markdown("### Tips")
             st.write("- Research before buying")
             st.write("- Avoid investing money you may need soon, as stocks can be unpredictable")
+        with col2:
+            st.image("Graphics/stocks.png")
+            
         
         # Add risk assessment tool
         st.markdown("### 📊 Risk Assessment Tool")
