@@ -7,7 +7,7 @@ st.title (" 💳 Credit")
 st.header  ("What is it? ")
 st.write  ("A numerical rating that indicates your creditworthiness, impacting your ability to get loans and favorable rates. Tips: Regularly check your credit report, and try to keep a good payment history and low credit utilization.")
 
-    
+image_url = "https://naran128386/Downloads/to/your/image.jpeg"
 with st.expander ("Opening Credit Cards"):
     st.write ('''
               What is it? A numerical rating that indicates your creditworthiness, impacting your ability to get loans and favorable rates. Tips: Regularly check your credit report, and try to keep a good payment history and low credit utilization.
