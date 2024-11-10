@@ -39,6 +39,10 @@ def create_flashcards():
             align-items: center;
             justify-content: center;
         }
+        div.stButton {
+    text-align: center;
+}
+        
         </style>
         """, unsafe_allow_html=True)
     
