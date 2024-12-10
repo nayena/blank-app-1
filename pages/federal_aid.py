@@ -36,7 +36,6 @@ with st.expander("Click Here To See!"):
         st.write("**Outside Scholarships**")
         st.write("Financial awards for students from non-governmental sources, like private organizations, businesses, or foundations, to help pay for education.") 
 
-# Create tabs for federal aid types
 tabs = st.tabs(["Pell Grant", "Work Study", "Outside Scholarships", "Direct Subsidized Loans", "Direct Subsidized Loans"])
  
 with tabs[0]:
@@ -165,7 +164,6 @@ with st.expander("Click Here To See!"):
         st.write("**Federal Loan Discharge**")
         st.write("cancels a borrower's federal student loan due to specific circumstances, such as disability, school closure, or fraud.")  
 
-# Create tabs for federal aid types
 tabs = st.tabs(["Repayment Plans", "Loan Deferment and Forbearance", "Loan Forgiveness or Discharge"])
  
 with tabs[0]:

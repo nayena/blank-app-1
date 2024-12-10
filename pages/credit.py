@@ -136,7 +136,7 @@ with st.expander("1. Choose Your Credit Card Type", expanded=True):
             "interest_rate": 20,
             "annual_fee": 50,
             "credit_limit": 1500,
-            "rewards_rate": 0.02  # Rewards 2% cash back on purchases
+            "rewards_rate": 0.02  
         },
         "Student Card": {
             "interest_rate": 25,
@@ -147,18 +147,15 @@ with st.expander("1. Choose Your Credit Card Type", expanded=True):
     card_type = st.selectbox("Select a Credit Card Type", list(card_options.keys()))
     selected_card = card_options[card_type]
     
-    # Display Card Details
     st.write(f"**Interest Rate:** {selected_card['interest_rate']}%")
     st.write(f"**Annual Fee:** ${selected_card['annual_fee']}")
     st.write(f"**Credit Limit:** ${selected_card['credit_limit']}")
 
-# Initialize or reset balance and credit score
 if "balance" not in st.session_state:
     st.session_state.balance = 0
 if "credit_score" not in st.session_state:
     st.session_state.credit_score = 700
 
-# --- Step 2: Make a Transaction ---
 with st.expander("2. Make a Transaction", expanded=True):
     transaction_options = {
         "Pay for Books": 200,
@@ -170,7 +167,6 @@ with st.expander("2. Make a Transaction", expanded=True):
     amount = transaction_options[transaction]
     
     if st.button("Submit Transaction"):
-        # Calculate new balance
         if transaction == "Pay Credit Card Balance":
             payment = min(amount, st.session_state.balance)
             st.session_state.balance -= payment
@@ -179,13 +175,11 @@ with st.expander("2. Make a Transaction", expanded=True):
             st.session_state.balance += amount
             st.write(f"Transaction completed: {transaction} - ${amount}")
         
-        # Calculate rewards if applicable
         rewards = 0
         if "rewards_rate" in selected_card and amount > 0:
             rewards = amount * selected_card["rewards_rate"]
             st.write(f"Rewards Earned: ${rewards:.2f}")
         
-        # Update credit score
         if st.session_state.balance > selected_card["credit_limit"]:
             st.session_state.credit_score -= 20
             st.write("You exceeded your credit limit! Your credit score has been penalized by 20 points.")
@@ -196,11 +190,9 @@ with st.expander("2. Make a Transaction", expanded=True):
             st.session_state.credit_score += 5
             st.write("Great! Paying down your balance has increased your credit score by 5 points.")
         
-        # Display updated balance and credit score
         st.write(f"**New Balance:** ${st.session_state.balance}")
         st.write(f"**New Credit Score:** {st.session_state.credit_score}")
 
-# --- Step 3: Summary ---
 with st.expander("3. Summary :", expanded=True):
     st.write("Track your credit card balance, credit score, and see the effects of your decisions.")
     st.write(f"**Current Balance:** ${st.session_state.balance}")
